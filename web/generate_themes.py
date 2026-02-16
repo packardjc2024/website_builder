@@ -13,11 +13,10 @@ themes_dev_filepath = Path.joinpath(BASE_DIR, 'static', 'themes.css')
 # Dictionary for settings
 settings = {}
 
-# Check if navbar will be used:
-use_navbar = os.getenv('USE_NAVBAR', 'False').strip().lower() == 'true'
-if use_navbar:
-    settings['--navbar-background-color'] = os.getenv('NAVBAR_BACKGROUND_COLOR', 'white')
-    settings['--navbar-text-color'] = os.getenv('NAVBAR_TEXT_COLOR', 'black')
+# Check if a avbar will be used:
+if os.getenv('USE_NAVBAR', 'False').strip().lower() == 'true':
+    settings['--navbar-background-color'] = os.getenv('NAVBAR_BACKGROUND_COLOR', 'black')
+    settings['--navbar-text-color'] = os.getenv('NAVBAR_TEXT_COLOR', 'white')
     settings['--navbar-border-size'] = os.getenv('NAVBAR_BORDER_SIZE', 'none')
     settings['--navbar-border-style'] = os.getenv('NAVBAR_BORDER_STYLE', 'none')
     settings['--navbar-border-color'] = os.getenv('NAVBAR_BORDER_COLOR', 'none')
@@ -29,10 +28,19 @@ if use_navbar:
         settings['--navbar-border-radius'] = os.getenv('NAVBAR_BORDER_RADIUS', '20px')
         settings['--navbar-width'] = '95%'
 
+# Check if a footer will be used:
+if os.getenv('USE_FOOTER', 'False').strip().lower() == 'true':
+    settings['--footer-background-color'] = os.getenv('FOOTER_BACKGROUND_COLOR', 'black')
+    settings['--footer-text-color'] = os.getenv('FOOTER_TEXT_COLOR', 'white')
+    settings['--footer-border-size'] = os.getenv('FOOTER_BORDER_SIZE', 'none')
+    settings['--footer-border-style'] = os.getenv('FOOTER_BORDER_STYLE', 'none')
+    settings['--footer-border-color'] = os.getenv('FOOTER_BORDER_COLOR', 'none')
+    settings['--footer-height'] = os.getenv('FOOTER_HEIGHT', '50px')
+
 # Create the file content
 settings_string = ''
 for key, value in settings.items():
-    settings_string += f'\t{key}: {value};\n'
+    settings_string += f'\t{key}: {value} !important;\n'
 css_content = f':root {{\n{settings_string}\n}}'
 
 print(css_content)

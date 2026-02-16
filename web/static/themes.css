@@ -1,12 +1,18 @@
 :root {
-	--navbar-background-color: grey;
-	--navbar-text-color: black;
-	--navbar-border-size: 2px;
-	--navbar-border-style: solid;
-	--navbar-border-color: black;
-	--navbar-height: 100px;
-	--navbar-position: fixed;
-	--navbar-width: 100%;
-	--navbar-margin-top: 0px;
+	--navbar-background-color: grey !important;
+	--navbar-text-color: black !important;
+	--navbar-border-size: 2px !important;
+	--navbar-border-style: solid !important;
+	--navbar-border-color: black !important;
+	--navbar-height: 100px !important;
+	--navbar-position: fixed !important;
+	--navbar-width: 100% !important;
+	--navbar-margin-top: 0px !important;
+	--footer-background-color: grey !important;
+	--footer-text-color: black !important;
+	--footer-border-size: 2px !important;
+	--footer-border-style: solid !important;
+	--footer-border-color: black !important;
+	--footer-height: 50px !important;
 
 }

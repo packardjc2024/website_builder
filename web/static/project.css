@@ -42,7 +42,6 @@ body {
     color: var(--text-color);
 }
 
-
 /***** Main Section *****/
 #main-section {
     margin-top: calc(var(--navbar-height) + var(--navbar-margin-top));
