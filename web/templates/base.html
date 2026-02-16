@@ -17,6 +17,7 @@
     <script type="text/javascript" src="{% static 'jquery.js' %}"></script>
     <!-- Project level CSS and JS Files -->
     <link rel="stylesheet" type="text/css" href='{% static "project.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "navbar.css" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "themes.css" %}'>
     <script type="text/javascript" src="{% static 'project.js' %}"></script>
     <!-- Block for Apps to add CSS and JS Files -->
@@ -26,11 +27,69 @@
 
 <body>
 
-    <!-- Navigation bar at the top of the page using "space-between flexbox"-->
-
+    <!-- Navbar at the top of the page-->
+    {% if use_navbar %}
+        {% include 'navbar.html' %}
+    {% endif %}
 
     <!-- main-div that contains everything except the nav-bar and bottom-footer -->
-     <div id="main-div">
+     <div id="main-section">
+
+        <p>first test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+
 
         {% block body_extension %}
         {% endblock %}
@@ -38,6 +97,9 @@
     </div> 
 
     <!-- Footer -->
+     {% if use_footer %}
+        {% include 'footer.html' %}
+    {% endif %}
 
 </body>
 

@@ -1,0 +1,50 @@
+/***** Settings for entire site *****/
+*, *::before, *::after {
+    margin: 0px; /* No default margin for all elements */
+    padding: 0px; /* No default padding for all elements */
+    box-sizing: border-box; /* Padding/border included in calc */
+}
+
+
+/***** Define variables *****/
+:root {
+    --main-background-color: white;
+}
+
+
+/***** Settings for html and body *****/
+html, body {
+    width: 100vw;
+    overscroll-behavior: none;
+    background-color: var(--main-background-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/***** Define custom classes for the entire site *****/
+.centered-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-container {
+    border-radius: 10px;
+    border: var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: var(--glass-color);
+    color: var(--text-color);
+}
+
+
+/***** Main Section *****/
+#main-section {
+    margin-top: calc(var(--navbar-height) + var(--navbar-margin-top));
+    flex: 1; /* fill the remaining space */
+}

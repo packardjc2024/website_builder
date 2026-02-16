@@ -1,6 +1,12 @@
 :root {
-    --navbar-color: #4663ac;
-    --primary-color: #c8d9ed;
-    --secondary-color: #c1d8f0;
-    --tertiary-color: #d2deeb;
+	--navbar-background-color: grey;
+	--navbar-text-color: black;
+	--navbar-border-size: 2px;
+	--navbar-border-style: solid;
+	--navbar-border-color: black;
+	--navbar-height: 100px;
+	--navbar-position: fixed;
+	--navbar-width: 100%;
+	--navbar-margin-top: 0px;
+
 }

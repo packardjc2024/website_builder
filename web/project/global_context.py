@@ -9,6 +9,7 @@ from django.conf import settings
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+from django.templatetags.static import static
 
 
 def add_global_context(request):
@@ -21,6 +22,7 @@ def add_global_context(request):
         'site_title': os.getenv('SITE_NAME'),
         'copyright_name': os.getenv('COPYRIGHT_NAME'),
         'copyright_year': os.getenv('COPYRIGHT_YEAR', datetime.now().year),
-        'site_logo_url': 'site_pictures/logo.png',
+        'site_logo_url': static('site_pictures/logo.png'),
         'use_account': settings.USE_ACCOUNT,
+        'use_navbar': os.getenv("USE_NAVBAR", "False").strip().lower() == "true"
     }

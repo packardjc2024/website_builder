@@ -1,0 +1,56 @@
+{% load static %}
+<!-- Navbar for large screens -->
+<div id="full-navbar" class="navbar">
+    <div class="navbar-content">
+        <div id="navbar-left" class="centered-flexbox">
+            <a href="{% url 'index' %}">
+                <img id="site-logo-large" src="{{ site_logo_url }}" alt="Site Logo">
+            </a>
+            <a class="site-title-link" href="{% url 'index' %}">
+                <h1 class="site-title">{{ site_title }}</h1>
+            </a>
+        </div>
+        <div id="navbar-center" class="centered-flexbox">
+            <!-- <a>{{ section_link }}</a> -->
+        </div>
+        {% if use_account %}
+        <div class="navbar-right">
+            <a href="{% url 'account:index' %}">
+                <img src="{% static 'site_pictures/account.svg' %}" alt="Login">
+            </a>
+            <a href="{% url 'account:user_logout' %}">
+                <img src="{% static 'site_pictures/logout.svg' %}" alt="Login">
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+<!-- Navbar for small screens -->
+<div id="small-navbar" class="navbar">
+    <div class="navbar-content">
+        <div id="small-navbar-left" class="navbar-left centered-flexbox">
+            <a href="{% url 'index' %}">
+                <img id="site-logo-small" src="{{ site_logo_url }}" alt="Site Logo">
+            </a>
+            <a class="site-title-link" href="{% url 'index' %}">
+                <h1 class="site-title">{{ site_title }}</h1>
+            </a>
+        </div>
+        <div id="small-navbar-right">
+            <img id="small-navbar-menu-icon" src="{% static 'site_pictures/menu.svg' %}">
+            <div id="small-navbar-dropdown-container">
+                {% if use_account %}
+                    <a href="{% url 'account:index' %}">
+                        <img src="{% static 'site_pictures/account.svg' %}" alt="Login">
+                    </a>
+                    <a href="{% url 'account:user_logout' %}">
+                        <img src="{% static 'site_pictures/logout.svg' %}" alt="Login">
+                    </a>
+                {% endif %}
+                <a><p>test</p></a>
+            </div>
+        </div>
+    </div>
+</div>
