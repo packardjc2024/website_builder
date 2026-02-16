@@ -30,12 +30,16 @@ if os.getenv('USE_NAVBAR', 'False').strip().lower() == 'true':
 
 # Check if a footer will be used:
 if os.getenv('USE_FOOTER', 'False').strip().lower() == 'true':
-    settings['--footer-background-color'] = os.getenv('FOOTER_BACKGROUND_COLOR', 'black')
-    settings['--footer-text-color'] = os.getenv('FOOTER_TEXT_COLOR', 'white')
+    settings['--footer-background-color'] = os.getenv('FOOTER_BACKGROUND_COLOR', settings['--navbar-background-color'])
+    settings['--footer-text-color'] = os.getenv('FOOTER_TEXT_COLOR', settings['--navbar-text-color'])
     settings['--footer-border-size'] = os.getenv('FOOTER_BORDER_SIZE', 'none')
     settings['--footer-border-style'] = os.getenv('FOOTER_BORDER_STYLE', 'none')
     settings['--footer-border-color'] = os.getenv('FOOTER_BORDER_COLOR', 'none')
     settings['--footer-height'] = os.getenv('FOOTER_HEIGHT', '50px')
+
+# Main colors:
+settings['--primary-background-color'] = os.getenv('PRIMARY_BACKGROUND_COLOR', 'white')
+settings['--primary-text-color'] = os.getenv('PRIMARY_TEXT_COLOR', 'white')
 
 # Create the file content
 settings_string = ''

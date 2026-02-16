@@ -1,6 +1,6 @@
 :root {
-	--navbar-background-color: grey !important;
-	--navbar-text-color: black !important;
+	--navbar-background-color: #404E3B !important;
+	--navbar-text-color: #E6E6E6 !important;
 	--navbar-border-size: 2px !important;
 	--navbar-border-style: solid !important;
 	--navbar-border-color: black !important;
@@ -8,11 +8,13 @@
 	--navbar-position: fixed !important;
 	--navbar-width: 100% !important;
 	--navbar-margin-top: 0px !important;
-	--footer-background-color: grey !important;
-	--footer-text-color: black !important;
+	--footer-background-color: #404E3B !important;
+	--footer-text-color: #E6E6E6 !important;
 	--footer-border-size: 2px !important;
 	--footer-border-style: solid !important;
 	--footer-border-color: black !important;
 	--footer-height: 50px !important;
+	--primary-background-color: #E6E6E6 !important;
+	--primary-text-color: black !important;
 
 }
