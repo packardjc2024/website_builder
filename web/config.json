@@ -1,0 +1,33 @@
+{
+    "apps": {
+        "use_account": false,
+        "use_api": true,
+        "use_editor": true,
+        "use_admin": false,
+        "use_email": false
+    },
+    "general": {
+        "site_title": "Website Builder",
+        "primary_color": "#ece9e4"
+    },
+    "page_links": [
+        "Welcome",
+        "Projects",
+        "Work History",
+        "Education"
+    ],
+    "navbar": {
+        "use_navbar": true,
+        "glass": true,
+        "style": "rounded",
+        "fixed": true,
+        "height": "60",
+        "margin_top": "10",
+        "padding": "100"
+    },
+    "footer": {
+        "use_footer": true,
+        "height": "50",
+        "background_color": "red"
+    }
+}
