@@ -22,7 +22,7 @@ def add_global_context(request):
     load_dotenv(SECRETS_PATH)
 
     # Load config data
-    CONFIG_PATH = Path.joinpath(settings.BASE_DIR, 'config.json')
+    CONFIG_PATH = settings.CONFIG_PATH
     with open(CONFIG_PATH, 'r') as file:
         config_data = json.load(file)
 
