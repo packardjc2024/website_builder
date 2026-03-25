@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRETS_PATH = Path.joinpath(BASE_DIR, '.env')
 load_dotenv(SECRETS_PATH)
 ENCRYPTION_KEY = os.getenv('ENCRYPTION_KEY')
-CONFIG_PATH = Path.joinpath(BASE_DIR, 'config.json')
+CONFIG_PATH = Path.joinpath(BASE_DIR, 'config', 'config.json')
 with open(CONFIG_PATH, 'r') as file:
     config_data = json.load(file)
 

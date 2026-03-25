@@ -9,7 +9,7 @@ from project.generate_css import generate_css_file
 ###############################################################################
 # Constants
 ###############################################################################
-CONFIG_PATH = Path.joinpath(settings.BASE_DIR, 'config.json')
+CONFIG_PATH = Path.joinpath(settings.BASE_DIR, 'config', 'config.json')
 
 SECTIONS = [
     'general',
