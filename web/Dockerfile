@@ -18,9 +18,6 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt /app/
 RUN pip3 install -r requirements.txt
 
-# RUN rm -rf staticfiles/*
-# RUN cp -r static/* staticfiles/
-
 # Copy project
 COPY . /app
 
@@ -38,6 +35,7 @@ RUN mkdir -p /app/staticfiles /app/media /app/logs
 RUN chown -R www-data:www-data /app
 RUN chmod -R 755 /app
 RUN chmod -R 775 /app/staticfiles /app/media /app/logs
+RUN touch /app/config.json && chown www-data:www-data /app/config.json
 USER www-data
 
 # Run the entrypoint bash file
