@@ -8,7 +8,8 @@
     },
     "general": {
         "site_title": "Website Builder",
-        "primary_color": "#ece9e4"
+        "primary_color": "#ece9e4",
+        "navbar_color": null
     },
     "page_links": [
         "Welcome",
