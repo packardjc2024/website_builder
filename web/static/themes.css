@@ -1,13 +1,19 @@
 :root {
-	--primary-color: #ece9e4 !important;
-	--main-section-height: calc(100vh - 60px - 50px) !important;
-	--navbar-height: 60px !important;
-	--navbar-fixed: fixed !important;
-	--main-section-margin-top: 70px !important;
+	--navbar-background-color:  !important;
+	--navbar-text-color:  !important;
+	--navbar-border-size:  !important;
+	--navbar-border-style:  !important;
+	--navbar-border-color:  !important;
+	--navbar-height: 50px !important;
+	--navbar-position: fixed !important;
 	--navbar-width: 95% !important;
+	--navbar-margin-top: 20px !important;
 	--navbar-border-radius: 20px !important;
-	--navbar-margin-top: 10px !important;
-	--footer-background-color: red !important;
-	--footer-height: 50px !important;
+	--primary-background-color: #ece9e4 !important;
+	--primary-text-color: black !important;
+	--secondary-background-color: #BAC8B1 !important;
+	--secondary-text-color: black !important;
+	--tertiary-background-color: #6C8480 !important;
+	--tertiary-text-color: #E6E6E6 !important;
 
 }

@@ -38,6 +38,4 @@ python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-chown www-data:www-data /app/config.json
-
 exec "$@"
