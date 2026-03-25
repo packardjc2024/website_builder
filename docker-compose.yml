@@ -41,6 +41,7 @@ services:
       - ./web/media_volume:/app/media
       - ./web/static_volume:/app/staticfiles
       - ./web/logs_volume:/app/logs
+      - config_data:/app/config.json
     networks:
       - app_network
 
@@ -49,6 +50,7 @@ volumes:
   media_volume:
   static_volume:
   logs_volume:
+  config_data:
 
 networks:
   app_network:

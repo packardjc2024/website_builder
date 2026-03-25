@@ -35,8 +35,6 @@ RUN mkdir -p /app/staticfiles /app/media /app/logs
 RUN chown -R www-data:www-data /app
 RUN chmod -R 755 /app
 RUN chmod -R 775 /app/staticfiles /app/media /app/logs
-RUN chown www-data:www-data /app/config.json
-RUN chmod 664 /app/config.json
 USER www-data
 
 
