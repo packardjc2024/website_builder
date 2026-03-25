@@ -36,12 +36,13 @@ def generate_css_file():
             css['--navbar-width'] = '95%'
             css['--navbar-margin-top'] = data['navbar']['margin_top'] + 'px'
         if not data['navbar']['glass']:
-            css['navbar-background-color'] = 'blue'
+            css['--navbar-background-color'] = data['general']['navbar_color']
 
     # Footer:
     if data['footer']['use_footer']:
         css['--footer-background-color'] = data['footer']['background_color']
         css['--footer-height'] = data['footer']['height'] + 'px'
+    
 
     # Create the file content
     css_string = ''

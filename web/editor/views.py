@@ -80,12 +80,14 @@ def general(request):
         # Preload the current settings
         context['general'] = {
             'site_title': data['general']['site_title'],
-            'primary_color': data['general']['primary_color']
+            'primary_color': data['general']['primary_color'],
+            'navbar_color': data['general']['navbar_color'],
         }
         return render(request, 'editor/general_form.html', context)
     if request.method == 'POST':
         data['general']['site_title'] = request.POST.get('site-title')
         data['general']['primary_color'] = request.POST.get('primary-color')
+        data['general']['navbar_color'] = request.POST.get('navbar-color')
         write_config(data)
         return redirect('editor:index')
 
