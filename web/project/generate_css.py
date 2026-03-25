@@ -6,7 +6,7 @@ def generate_css_file():
     # Deal with filepaths.
     themes_prod_filepath = Path.joinpath(settings.BASE_DIR, 'staticfiles', 'themes.css')
     themes_dev_filepath = Path.joinpath(settings.BASE_DIR, 'static', 'themes.css')
-    config_path = Path.joinpath(settings.BASE_DIR, 'config.json')
+    config_path = Path.joinpath(settings.BASE_DIR, 'config', 'config.json')
     css = {}
 
     # Read the config file
