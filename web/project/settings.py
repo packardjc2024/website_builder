@@ -39,6 +39,11 @@ LOGOUT_REDIRECT_URL = '/account/'
 USE_API = config_data['apps']['use_api']
 USE_EDITOR = config_data['apps']['use_editor']
 USE_ADMIN = config_data['apps']['use_admin']
+USE_CHATBOT = config_data['apps']['use_chatbot']
+
+# Get api keys
+if USE_CHATBOT:
+    GOOGLE_KEY = os.getenv('GOOGLE_KEY')
 
 DEBUG = True #Bash_Target
 
@@ -76,6 +81,7 @@ INSTALLED_APPS = [
     'home_page',  # Home page of app,
     'editor',  # Design the website
     'api',
+    'chatbot',
 ]
 
 # Set up Django Rest Framework

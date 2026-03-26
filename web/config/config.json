@@ -5,7 +5,8 @@
         "use_editor": true,
         "use_admin": false,
         "use_email": false,
-        "use_contact": false
+        "use_contact": false,
+        "use_chatbot": true
     },
     "general": {
         "site_title": "Website Builder",
@@ -13,7 +14,8 @@
         "navbar_color": null
     },
     "page_links": [
-        "Editor"
+        "Editor",
+        "ChatBot"
     ],
     "navbar": {
         "use_navbar": true,

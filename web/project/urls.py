@@ -28,5 +28,8 @@ if settings.USE_EDITOR:
 if settings.USE_ADMIN:
     urlpatterns.append(path('admin/', admin.site.urls))
 
+if settings.USE_CHATBOT:
+    urlpatterns.append(path('chatbot/', include('chatbot.urls')))
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

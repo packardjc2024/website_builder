@@ -11,3 +11,5 @@ django-environ
 requests
 djangorestframework
 djangorestframework-simplejwt
+huggingface_hub
+google-genai
