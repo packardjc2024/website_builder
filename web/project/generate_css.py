@@ -51,9 +51,9 @@ def generate_css_file():
     css_content = f':root {{\n{css_string}\n}}'
 
     # Write the files. 
-    if not settings.DEBUG:
-        with open(themes_prod_filepath, 'w') as file:
-            file.write(css_content.strip())
-    else:
+    
+    with open(themes_prod_filepath, 'w') as file:
+        file.write(css_content.strip())
+    if settings.DEBUG:
         with open(themes_dev_filepath, 'w') as file:
             file.write(css_content.strip())

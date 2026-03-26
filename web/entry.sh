@@ -28,7 +28,8 @@ until pg_isready -h db -p 5432; do
 done
 
 # Read the theme  files
-python3 generate_themes.py
+echo "generating themes"
+python3 project/generate_css.py
 
 
 # Collect static files
