@@ -12,10 +12,7 @@
         "navbar_color": null
     },
     "page_links": [
-        "Welcome",
-        "Projects",
-        "Work History",
-        "Education"
+        "Editor"
     ],
     "navbar": {
         "use_navbar": true,

@@ -31,8 +31,9 @@ def add_global_context(request):
     for page in config_data['page_links']:
         page_links.append({
             'display_name': page.title().replace('_', ' '),
-            'html_name': page.lower().replace(' ', '-'),
+            'href': f"{page.lower().replace(' ', '-')}:index",
         })
+    print(page_links)
 
     # Return the global context dictionary
     return {
