@@ -21,6 +21,13 @@
     <h5>Do not enter any sensitive information.</h5>
 </div>
 
+<div id="chat-toolbar">
+    <form method="post" action="{% url 'chatbot:clear_history' %}">
+        {% csrf_token %}
+        <button type="submit">Clear History</button>
+    </form>
+</div>
+
 <div id="chat-container" class="glass-container">
 
     <div id="chat-history">
@@ -38,8 +45,4 @@
    
 </div>
 
-
-
 {% endblock %}
-
-<!--  -->

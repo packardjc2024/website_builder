@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from google import genai
+from google.genai import errors
 from django.conf import settings
 
 
@@ -19,8 +20,11 @@ def index(request):
         
         # Get the response
         history = request.session['chat_history']
-        chat = client.chats.create(model=model, history=history)
-        response = chat.send_message(prompt)
+        try:
+            chat = client.chats.create(model=model, history=history)
+            response = chat.send_message(prompt)
+        except errors.APIError as e:
+            return  HttpResponse('Model free tier quota exceeded...')
 
         # Update the history
         history.append({'role': 'user', 'parts': [{'text': prompt}]})
