@@ -28,8 +28,10 @@
                 <img src="{% static 'site_pictures/logout.svg' %}" alt="Login">
             </a>
             {% endif %}
+            {% if use_contact %}
             <a id="navbar-contact" href="#contact-section" class="section-link">Contact</a>
-            <a id="github-navbar-img" href="https://github.com/packardjc2024">
+            {% endif %}
+            <a id="github-navbar-img" href="https://github.com/packardjc2024/website_builder">
                 <img src="{% static 'site_pictures/github_black.svg' %}">
             </a>
         </div>
@@ -63,8 +65,10 @@
                     {% for page in page_links %}
                         <a href="{% url page.href %}" class="section-link">{{ page.display_name }}</a>
                     {% endfor %}
+                    {% if use_contact %}
                     <a href="#contact-section" class="section-link">Contact</a>
-                    <a href="https://github.com/packardjc2024" class="section-link">GitHub</a>
+                    {% endif %}
+                    <a href="https://github.com/packardjc2024/website_builder" class="section-link">GitHub</a>
             </div>
         </div>
     </div>

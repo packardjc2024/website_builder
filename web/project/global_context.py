@@ -33,10 +33,10 @@ def add_global_context(request):
             'display_name': page.title().replace('_', ' '),
             'href': f"{page.lower().replace(' ', '-')}:index",
         })
-    print(page_links)
 
     # Return the global context dictionary
     return {
+        # General
         'site_title': config_data['general']['site_title'],
         'site_logo_url': static('site_pictures/logo.png'),
         'page_links': page_links,
@@ -48,6 +48,7 @@ def add_global_context(request):
         # Navbar
         'use_navbar': config_data['navbar']['use_navbar'],
         'navbar_glass': config_data['navbar']['glass'],
+        'use_contact': config_data['apps']['use_contact'],
         # Footer
         'use_footer': config_data['footer']['use_footer'],
         'attributions': [
