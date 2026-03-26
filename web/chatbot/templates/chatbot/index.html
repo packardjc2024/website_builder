@@ -33,6 +33,7 @@
     
     <form id="chatbot-form" method="post" action="{% url 'chatbot:index' %}">
         {% csrf_token %}
+        <textarea id="prompt" name="prompt" rows="10" cols="50" placeholder="Ask me something..."></textarea>
     </form>
    
 </div>
