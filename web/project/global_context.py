@@ -28,11 +28,17 @@ def add_global_context(request):
 
     # Process config data
     page_links = []
+
     for page in config_data['page_links']:
-        page_links.append({
-            'display_name': page.title().replace('_', ' '),
-            'href': f"{page.lower().replace(' ', '-')}:index",
-        })
+        if page.lower().strip().replace(' ', '') == 'chatbot' and not config_data['apps']['use_chatbot']:
+            pass
+        else:
+            page_links.append({
+                'display_name': page.title().replace('_', ' '),
+                'href': f"{page.lower().replace(' ', '-')}:index",
+            })
+    
+    print(page_links)
 
     # Return the global context dictionary
     return {

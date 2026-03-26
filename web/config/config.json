@@ -6,7 +6,7 @@
         "use_admin": false,
         "use_email": false,
         "use_contact": false,
-        "use_chatbot": true
+        "use_chatbot": false
     },
     "general": {
         "site_title": "Website Builder",
